@@ -24,13 +24,10 @@ function bubbleSort(arr){
     // after third for-loop: [3,12,20]
     do{
       var count = 0;
-      for(var i = 1; i < arr.length; i++){
-            var temp;    
+      for(var i = 1; i < arr.length; i++){    
             if(arr[i] < arr[i - 1]){
                 count++;
-                temp = arr[i-1];
-                arr[i - 1] = arr[i];
-                arr[i] = temp;
+                swap(arr[i], arr[i-1]);
             }
 
         }
@@ -38,3 +35,10 @@ function bubbleSort(arr){
     
     return arr;
 }
+
+function swap(a, b){
+   var temp = a;
+   a = b;
+   b = temp;
+}
+
