@@ -14,9 +14,7 @@ describe('Bubble Sort', function(){
   });
   //test 5 items
   it('handles multiple item array', function(){
-    spyOn(window, 'swap').and.callThrough();
     expect(bubbleSort([2, 10, 56, 7, 14])).toEqual([2, 7, 10, 14, 56]);
-    expect(swap).toHaveBeenCalled();
   });
 
   it('right number of swaps', function(){
@@ -24,6 +22,6 @@ describe('Bubble Sort', function(){
     expect(bubbleSort([2, 10, 56, 7, 14]));
     expect(swap.calls.count()).toEqual(3);
   })
-
+  
 });
 
